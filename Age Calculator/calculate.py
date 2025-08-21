@@ -42,3 +42,24 @@ for m in range(1, localtime.tm_mon):
 day = day + localtime.tm_mday
 print("\n\t%s's age is %d years or " % (name, year), end="")
 print("%d months or %d days" % (month, day))
+
+
+
+import time 
+from calendar import isleap
+
+def jugde_leap_yr(year):
+    if isleap(year):
+        return True
+    else:
+        return False
+    
+def month_days(month, leap_year):
+    if month(1,3,5,7,8,10,12):
+        return 31
+    elif month(4,6,9,11):
+        return 30
+    elif month(2) and leap_year:
+        return 29
+    elif month(2) and  not leap_year:
+        return 28
